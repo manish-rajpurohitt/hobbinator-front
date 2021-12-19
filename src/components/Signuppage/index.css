@@ -1,0 +1,18 @@
+.paper-pc{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    height: 4%;
+    width:600px;
+}
+
+
+.signup-container{
+    margin-top: 30px;
+}
+
+.pincode{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}

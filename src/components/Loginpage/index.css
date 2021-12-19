@@ -1,0 +1,18 @@
+.paper-mobile{
+    background-image: "../images/bg.png";
+
+}
+
+.login-container{
+    margin-top: 30px;
+}
+
+
+.paper-pc{
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    height: 5%;
+    width:100wh;
+
+}

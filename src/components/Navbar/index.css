@@ -1,0 +1,15 @@
+.signup-btn{
+    width: 115px;
+    height: 44px;
+    border: 0;
+    background-color: linear-gradient(89.5deg, #998BEF 2.96%, #DDDAF0 98.27%) !important;
+    border-radius: 22px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 20px;
+    
+}
+
+.navbar{
+    margin-bottom: 30px;
+}

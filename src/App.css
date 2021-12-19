@@ -1,38 +1,21 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Cinizel-ExtraBold';
+  src: local('Cinizel-ExtraBold'), url(./fonts/Cinzel/static/Cinzel-ExtraBold.ttf) format('opentype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Cinizel-Bold';
+  src: local('Cinizel-Bold'), url(./fonts/Cinzel/static/Cinzel-Bold.ttf) format('opentype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Cinizel-Regular';
+  src: local('Cinizel-Regular'), url(./fonts/Cinzel/static/Cinzel-Regular.ttf) format('opentype');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+*{
+  -ms-overflow-style: none;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar {
+  display: none;
 }
