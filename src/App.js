@@ -10,7 +10,7 @@ import { initialState, reducer } from './components/reducers/UseReducer';
 import ForgotPassword from './components/ForgotPasswordPage';
 import Dashboard from './components/Dashboard';
 import ResetPassword from './components/ResetPassword';
-import ProfilePage from './components/ProfilePage';
+import ProfilePage from './components/ProfilePage/ProfilePage';
 
 export const Usercontext = createContext();
 

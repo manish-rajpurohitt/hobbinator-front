@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Card, CardContent, CardActions,Divider,ListItemAvatar, Paper,List, ListItemButton,ListItemText,Demo, Typography,Grid, Button,ListItem, Alert,Stack,Box, Radio, Link, RadioGroup, FormControlLabel} from "@mui/material";
+import { Avatar, Card,Chip, CardContent, CardActions,Divider,ListItemAvatar, Paper,List, ListItemButton,ListItemText,Demo, Typography,Grid, Button,ListItem, Alert,Stack,Box, Radio, Link, RadioGroup, FormControlLabel} from "@mui/material";
 import api from '../api/api';
 import { useNavigate } from 'react-router-dom';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
@@ -125,15 +125,12 @@ function DashboardPc() {
             try{
                 const {data} = await api.get("/api/user/fetchUserWithHobbiesAndLocation", config);
                 updateUsersList(data.listOfUsers);
-                console.log(data)
               }
               catch(error){
+                  console.log();
                 setError(error.response.data.error);
                 setTimeout(()=>{
                     setError("");
-                    localStorage.removeItem("authToken");
-                    localStorage.removeItem("userId");
-                    navigate("/");
                 }, 5000)
                 return;
               }
@@ -165,12 +162,11 @@ function DashboardPc() {
                                     {user.displayName}
                                     </Typography>
                                     <Typography gutterBottom variant="body2" color="text.secondary">
-                                        Matched Hobbies:{user.listOfHobbies.map(ele=><>{ele}</>)}
+                                        Matched Hobbies:{user.listOfHobbies.map(ele=><Chip key={ele.hobbyId} label={ele.hobbyName} variant="outlined"></Chip>)}
                                     </Typography>
                                     <Typography gutterBottom variant="body2" color="text.secondary">
                                         {user.gender}
                                     </Typography>
-                                    <p></p>
                                 </CardContent>
                                 </Card>
                                 </div>
